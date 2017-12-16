@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react'
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as courseActions from '../../actions/courseActions'
+import {Redirect } from 'react-router-dom'
 
 import CourseList from './CourseList'
 
@@ -15,6 +16,9 @@ class CoursePage extends React.Component {
         return (
             <li key={index}>{course.title}</li>
         )
+    }
+
+    redirectToAddCoursePage(event){
     }
 
     render() {
