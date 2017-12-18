@@ -1,9 +1,15 @@
 import React from 'react';
 import CourseListRow from './CourseListRow';
 
+import { Link } from 'react-router-dom';
+
+
 
 const CourseList = ({courses}) => {
-    debugger;
+    function changeUrl(e) {
+        e.preventDefault();
+
+    }
     return (
         <div>
             <table className="table">
@@ -20,6 +26,9 @@ const CourseList = ({courses}) => {
                 )}
                 </thead>
             </table>
+            <Link to='createcourse'>
+                <p className="btn btn-success">Add New Course</p>
+            </Link>
         </div>
     )
 }
